@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.main {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    width: 400px;
+    border-radius: 20px;
+    align-items: center;
+    padding: 15px;
+    margin: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.main_title_lower {
+    height: 2px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.password_includes_checkboxs {
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    width: 400px;
+    border-radius: 20px;
+    align-items: center;
+    padding: 15px;
+    margin: 20px;
+    font-size: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.main1,
+.main2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password_includes_checkboxs input {
+    display: none;
+}
+
+.custom_checkbox_label {
+    display: flex;
+    align-items: center;
+}
+
+.custom_checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    border: 2px solid black;
+    border-radius: 7px;
+    margin: 10px;
+}
+
+body {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(47deg, rgba(2, 0, 36, 1) 0%, rgba(76, 76, 133, 1) 30%, rgba(122, 122, 144, 1) 58%, rgba(255, 255, 255, 1) 100%);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.main_title {
+    text-align: center;
+    font-size: 30px;
+    height: 50px;
+    position: relative;
+    top: -20px;
+}
+
+.main_title_h3 {
+    height: 30px;
+}
+
+.generate_field {
+    display: block;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    ;
+}
+
+.password_length_range_bar .num_select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.password_length_range_bar .num_select input {
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    margin-left: 15px;
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+.PB-range-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: #D5DBE1;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.PB-range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #000000;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.PB-range-slider::-webkit-slider-thumb:hover {
+    box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.16);
+    transition: 0.3s ease-in-out;
+}
+
+.PB-range-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.PB-range-slider-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    /* border: 1px solid #C6CACE; */
+    /* box-shadow: 0px 1px 2px 0px #1F1E241F; */
+}
+
+.PB-range-slidervalue {
+    font-weight: 600;
+}
+
+.btn {
+    width: 400px;
+    height: 40px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    transition: all .4s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    user-select: none;
+}
+
+.btn:hover {
+    border-radius: 5px;
+    transform: translateY(-10px);
+    box-shadow: 0 7px 0 -2px #f85959,
+        0 15px 0 -4px #39a2db,
+        0 16px 10px -3px #39a2db;
+}
+
+.btn:active {
+    transition: all 0.2s;
+    transform: translateY(-5px);
+    box-shadow: 0 2px 0 -2px #f85959,
+        0 8px 0 -4px #39a2db,
+        0 12px 10px -3px #39a2db;
+}
+
+.gen_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.output_password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.output_password_class {
+    width: 400px;
+    height: 40px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    transition: all .4s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    /* text-align: center; */
+    text-indent: 20px;
+}
+
+/* tooltip settings 👇 */
+
+.copy {
+    /* button */
+    --button-bg: #353434;
+    --button-hover-bg: #464646;
+    --button-text-color: #CCCCCC;
+    --button-hover-text-color: #8bb9fe;
+    --button-border-radius: 10px;
+    --button-diameter: 36px;
+    --button-outline-width: 1px;
+    --button-outline-color: rgb(141, 141, 141);
+    /* tooltip */
+    --tooltip-bg: #f4f3f3;
+    --toolptip-border-radius: 4px;
+    --tooltip-font-family: Menlo, Roboto Mono, monospace;
+    /* 👆 this field should not be empty */
+    --tooltip-font-size: 12px;
+    /* 👆 this field should not be empty */
+    --tootip-text-color: rgb(50, 50, 50);
+    --tooltip-padding-x: 7px;
+    --tooltip-padding-y: 7px;
+    --tooltip-offset: 8px;
+    /* --tooltip-transition-duration: 0.3s; */
+    /* 👆 if you need a transition, 
+    just remove the comment,
+    but I didn't like the transition :| */
+}
+
+.copy {
+    box-sizing: border-box;
+    width: var(--button-diameter);
+    height: var(--button-diameter);
+    border-radius: var(--button-border-radius);
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+.tooltip {
+    position: absolute;
+    opacity: 0;
+    visibility: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font: var(--tooltip-font-size) var(--tooltip-font-family);
+    color: var(--tootip-text-color);
+    background: var(--tooltip-bg);
+    padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+    border-radius: var(--toolptip-border-radius);
+    pointer-events: none;
+    transition: all var(--tooltip-transition-duration) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+    content: attr(data-text-initial);
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: calc(var(--tooltip-padding-y) / 2 * -1);
+    width: var(--tooltip-padding-y);
+    height: var(--tooltip-padding-y);
+    background: inherit;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -999;
+    pointer-events: none;
+}
+
+.copy svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkmark {
+    display: none;
+}
+
+/* actions */
+
+.copy:hover .tooltip,
+.copy:focus:not(:focus-visible) .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: calc((100% + var(--tooltip-offset)) * -1);
+}
+
+.copy:focus:not(:focus-visible) .tooltip::before {
+    content: attr(data-text-end);
+}
+
+.copy:focus:not(:focus-visible) .clipboard {
+    display: none;
+}
+
+.copy:focus:not(:focus-visible) .checkmark {
+    display: block;
+}
+
+.copy:hover,
+.copy:focus {
+    background-color: var(--button-hover-bg);
+}
+
+.copy:active {
+    outline: var(--button-outline-width) solid var(--button-outline-color);
+}
+
+.copy:hover svg {
+    color: var(--button-hover-text-color);
+}
+
+.copy_btn{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 180px;
+}

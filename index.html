@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/02e38653e1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main1">
+        <div class="main">
+            <div class="main_title">
+                <h3 class="main_title_h3">Password Generator</h3>
+            </div>
+            <div class="main_title_lower"></div>
+            <div class="password_length_range_bar">
+                <div class="num_select">
+                    <p>Password length</p>
+                    <input type="number" name="password_length" id="password_length_number" min="1" max="50" value="12" oninput="checkNum(this)">    
+                </div>
+                <div class="PB-range-slider-div">
+                    <input type="range" min="1" max="50" value="12" class="PB-range-slider" id="password_length_range" oninput="rangeInput(this)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main2">
+        <div class="password_includes_checkboxs">
+            <div class="checkbox_include_uppercase_class">
+                <label for="checkbox_include_uppercase" class="custom_checkbox_label">
+                    <span class="custom_checkbox">
+                        <div id="custom_checkbox_uppercase">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </span>
+                    <input type="checkbox" name="include_uppercase" id="checkbox_include_uppercase" onclick="checkboxFunc(this)">Uppercase
+                </label>
+            </div>
+            <div class="checkbox_include_lowercase_class">
+                <label for="checkbox_include_lowercase" class="custom_checkbox_label">
+                    <span class="custom_checkbox">
+                        <div id="custom_checkbox_lowercase">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </span>
+                    <input type="checkbox" name="include_lowercase" id="checkbox_include_lowercase" onclick="checkboxFunc(this)">Lowercase
+                </label>
+            </div>
+            <div class="checkbox_include_number_class">
+                <label for="checkbox_include_number" class="custom_checkbox_label">
+                    <span class="custom_checkbox">
+                        <div id="custom_checkbox_number">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </span>
+                    <input type="checkbox" name="include_number" id="checkbox_include_number" onclick="checkboxFunc(this)">Numbers
+                </label>
+            </div>
+            <div class="checkbox_include_symbol_class">
+                <label for="checkbox_include_symbol" class="custom_checkbox_label">
+                    <span class="custom_checkbox">
+                        <div id="custom_checkbox_symbol">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </span>
+                    <input type="checkbox" name="include_symbol" id="checkbox_include_symbol" onclick="checkboxFunc(this)">Symbols
+                </label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="gen_button">
+        <button class="btn"  onclick="generatePassword()">Generate</button>
+    </div>
+
+    <div class="output_password">
+        <input type="text" name="output_password" id="output_password_box" class="output_password_class" placeholder="Press generate button">
+    </div>
+    <div class="copy_btn">
+        <button class="copy" onclick="copypass()">
+            <span data-text-end="Copied!" data-text-initial="Copy to clipboard" class="tooltip"></span>
+            <span>
+              <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 6.35 6.35" y="0" x="0" height="20" width="20" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" class="clipboard">
+                <g>
+                  <path fill="currentColor" d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"></path>
+                </g>
+              </svg>
+              <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 24 24" y="0" x="0" height="18" width="18" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" class="checkmark">
+                <g>
+                  <path data-original="#000000" fill="currentColor" d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"></path>
+                </g>
+              </svg>
+            </span>
+          </button>
+    </div>
+</body>
+</html>
