@@ -102,7 +102,5 @@ function generatePassword() {
 
 function copypass() {
     var copyText = document.getElementById("output_password_box");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(copyText.value);
 }
